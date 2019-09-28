@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+    <title>프로필 화면</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            align-items: center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h1><span class="fa fa-book"></span> 사용자 프로필</h1>
+            <a href="/logout" class="btn btn-default btn-sm">로그아웃</a>
+            <a href="/" class="btn btn-default btn-sm">홈으로</a>
+            <a href="../Problem/main.html" class="btn btn-default btn-sm">문제 풀기</a>
+        </div>
+        <br>
+        <div class="colum">
+
+            <div class="col-sm-6">
+                <div class="well">
+
+                    <% if (user.provider == undefined || user.provider == '') { %>
+                    <h3><span class="fa fa-user"></span> 프로필</h3>
+                    <br>
+                    <p>
+                        <strong>ID</strong>:
+                        <%= user.email %><br><br>
+                        <strong>별명</strong>:
+                        <%= user.name %>
+                    </p>
+                    <% } else if (user.provider == 'facebook') { %>
+                    <h3 class="text-primary"><span class="fa fa-facebook"></span> 페이스북 프로필</h3>
+                    <br>
+                    <p>
+                        <strong>아이디</strong>:
+                        <%= user.facebook.id %><br><br>
+                        <strong>이메일</strong>:
+                        <%= user.facebook.email %><br><br>
+                        <strong>이름</strong>:
+                        <%= user.facebook.name %>
+                    </p>
+                    <% } else if (user.provider == 'twitter') { %>
+                    <h3 class="text-primary"><span class="fa fa-twitter"></span> 트위터 프로필</h3>
+                    <br>
+                    <p>
+                        <strong>아이디</strong>:
+                        <%= user.twitter.id %><br><br>
+                        <strong>이메일</strong>:
+                        <%= user.twitter.email %><br><br>
+                        <strong>이름</strong>:
+                        <%= user.twitter.name %>
+                    </p>
+                    <% } else if (user.provider == 'google') { %>
+                    <h3 class="text-primary"><span class="fa fa-google"></span> 구글 프로필</h3>
+                    <br>
+                    <p>
+                        <strong>아이디</strong>:
+                        <%= user.google.id %><br><br>
+                        <strong>이메일</strong>:
+                        <%= user.google.email %><br><br>
+                        <strong>이름</strong>:
+                        <%= user.google.name %>
+                    </p>
+                    <% } %>
+
+                    <br>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class="well">
+
+                    <% if (user.provider == undefined || user.provider == '') { %>
+                    <h3><span class="fa fa-user"></span> 문제 풀이 현황</h3>
+                    <br>
+                    <p>
+                        <strong>총문제 수 : </strong>
+                        20 <br><br>
+                        <strong>푼문제 수 : </strong>
+                        <%= user.solve %>
+                    </p>
+
+                    <% } %>
+
+
+
+                    <br>
+                </div>
+            </div>
+
+        </div>
+        <div class="colum">
+
+            <div class="col-sm-12">
+                <div class="well">
+
+                    <% if (user.provider == undefined || user.provider == '') { %>
+                    <h3><span class="fa fa-user"></span> 전체 사용자 현황</h3>
+                    <br>
+                    <p>
+                        <strong>사용자 : </strong>
+                        걸스데이
+                        <strong>푼문제 수 : </strong>
+                        15
+                    </p>
+                    <p>
+                        <strong>사용자 : </strong>
+                        트와이스
+                        <strong>푼문제 수 : </strong>
+                        7
+                    </p>
+                    <p>
+                        <strong>사용자 : </strong>
+                        김현국
+                        <strong>푼문제 수 : </strong>
+                        3
+                    </p>
+                    <p>
+                        <strong>사용자 : </strong>
+                        <%= user.name %>
+                        <strong>푼문제 수 : </strong>
+                        <%= user.solve %>
+                    </p>
+
+                    <% } %>
+
+                    <br>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

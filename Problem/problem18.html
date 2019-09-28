@@ -1,0 +1,171 @@
+<!DOCTUPE HTML>
+
+<html lang="ko">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# projecteulerkr: http://ogp.me/ns/fb/projecteulerkr#">
+    <meta charset="utf-8">
+    <title>Problem 18 - Project Euler</title>
+
+    <!-- do not change -->
+    <link rel="stylesheet" type="text/css" href="css/style_main.css">
+    <link rel="stylesheet" type="text/css" href="css/style_light.css">
+
+
+</head>
+
+<style>
+    .container {
+            width:600px;
+            margin:0 auto;
+        }
+        ul {
+            list-style-type: none;
+        }
+        label.title {
+            font-weight: bold;
+            width: 80px;
+            float: left;
+        }
+        div.centered {
+            text-align: center;
+        }
+        fieldset {
+            margin: 15px 10px;
+        }
+        fieldset legend {
+            font-weight: bold;
+            font-size: 18px;
+            color: purple;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+
+<body>
+
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-859220-7']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <div id="container">
+
+
+
+        <fieldset>
+            <legend>Problem 18</legend>
+            <ul>
+                <li>
+                    <div class="problem_content" role="problem">
+                        <div style="color:#666;font-size:80%;">
+                            출제 일시 : 2012-01-03 19:11:35</div>
+                        <p>다음과 같이 삼각형 모양으로 숫자를 배열했습니다.</p>
+                        <p style="text-align: center;"><tt>
+                                <span style="color: rgb(255,0,0);"><strong>3</strong></span><br /><span style="color: rgb(255,0,0);"><strong>7</strong></span> 4<br />2 <span style="color: rgb(255,0,0);"><strong>4</strong></span> 6<br />8 5 <span style="color: rgb(255,0,0);"><strong>9</strong></span> 3
+                            </tt></p>
+                        <p>삼각형의 꼭대기부터 아래쪽으로 인접한 숫자를 찾아 내려가면서 합을 구하면, 위의 그림처럼 3 + 7 + 4 + 9 = 23 이 가장 큰 합을 갖는 경로가 됩니다.</p>
+                        <p>다음 삼각형에서 합이 최대가 되는 경로를 찾아서 그 합을 구하세요.</p>
+                        <p style="text-align: center;"><tt>
+                                75<br />95 64<br />17 47 82<br />18 35 87 10<br />20 04 82 47 65<br />19 01 23 75 03 34<br />88 02 77 73 07 63 67<br />99 65 04 28 06 16 70 92<br />41 41 26 56 83 40 80 70 33<br />41 48 72 33 47 32 37 16 94 29<br />53 71 44 65 25 43 91 52 97 51 14<br />70 11 33 28 77 73 17 78 39 68 17 57<br />91 71 52 38 17 14 91 43 58 50 27 29 48<br />63 66 04 68 89 53 67 30 73 16 69 87 40 31<br />04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
+                            </tt></p>
+                        <p class="info"><strong>참고:</strong> 여기서는 경로가 16384개밖에 안되기 때문에, 모든 경로의 합을 일일이 계산해서 답을 구하는 것이 가능합니다.<br />
+                            하지만 <a href="prob_detail.php?id=67" style="text-decoration: none;" class="external-link" rel="nofollow">67번 문제</a>에는 100층짜리 삼각형 배열이 나옵니다. 그런 경우에는 좀 더 현명한 풀이 방법을 찾아야겠지요.</p>
+                    </div>
+
+                </li>
+
+            </ul>
+        </fieldset>
+
+
+        <div id="content">
+
+
+            <div style="text-align:center;" class="noprint">
+                <form name="form1" method="post" action="/process/check">
+                    <input type="hidden" name="id" value="18">
+                    <table width="400" cellpadding="10" align="center">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div style="text-align:right;">정답:</div>
+                                                </td>
+                                                <td>
+                                                    <div style="text-align:left;">
+                                                        <input type="text" size="20" name="answer" autocomplete="off">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"> </td>
+                                            </tr>
+                                            <tr>
+
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                            </tr>
+
+                                            <tr>
+
+                                                <td height="30"> </td>
+                                                <td style="text-align:left;"><input type="submit" value="답안 제출"> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30"> </td>
+                                                <td style="text-align:center;"><input type="button" value="게시판" onClick="location.href='/public/listpost.html'"> </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <br>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
